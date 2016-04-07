@@ -1,1 +1,34 @@
+https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+
+#see if existing SSH keys are present:
+Enter: ls -al ~/.ssh                    
+
+#Creates a new ssh key, using the provided email as a label:
+Enter: ssh-keygen -t rsa -b 4096 -C "erinhmclark@hotmail.com"
+Output: Generating public/private rsa key pair.
+
+#will show after last entry
+Enter a file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]
+
+Enter passphrase (empty for no passphrase): [Type a passphrase]
+Enter same passphrase again: [Type passphrase again]
+
+# ensure ssh-agent is enabled: starts ssh-agent in the background
+Enter: eval "$(ssh-agent -s)"
+Output: Agent pid 59566
+
+# add SSH key to ssh-agent:
+Enter: ssh-add ~/.ssh/id_rsa
+
+(then can check in /ssh file to see new key)
+
+# adding the ssh key to github account:
+
+# Copy the contents of the id_rsa.pub file to your clipboard:
+$ pbcopy < ~/.ssh/id_rsa.pub
+
+# go to github, profile, settings, SSH and GPG keys, new ssh, give it a name, pase
+
+
+
 
