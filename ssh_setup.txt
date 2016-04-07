@@ -29,6 +29,7 @@ $ pbcopy < ~/.ssh/id_rsa.pub
 
 # go to github, profile, settings, SSH and GPG keys, new ssh, give it a name, pase
 
+# whenever a new key is made, add a new host in config
 
 
 
