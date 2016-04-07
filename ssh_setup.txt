@@ -31,5 +31,9 @@ $ pbcopy < ~/.ssh/id_rsa.pub
 
 # whenever a new key is made, add a new host in config
 
+# cd to right directory
+git clone randomgitman:randomgitman/td_ebrd.git
+# where "....": is the config name, :"..." is the github username
+
 
 
